@@ -1,0 +1,226 @@
+/* Small Screen */
+
+@media (min-width: 768px) {
+    header .container{
+     width: 750px;
+        }
+    }
+ 
+ /* Mid Screen */
+ 
+ @media (min-width: 992px) {
+    header .container{
+        width: 970px;
+        }
+    }
+ 
+ /* Large Screen */
+ 
+ @media (min-width: 1200px) {
+    header .container{
+         width: 1170px;
+        }  
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;    
+    }
+    ::-webkit-scrollbar-track {
+        background-color: white;
+        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--secColor);
+        
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #1d1d1d98;
+        
+    }
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --mainColor: #595dea;
+    --secColor: #333;
+}
+.content {
+    display: flex;
+    justify-content: flex-end;
+}
+.search {
+    position: fixed;
+    width: 45%;
+    height: 100vh;
+    background-color: var(--mainColor);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    gap: 10px;
+    transition: 0.5 all;
+}
+.results {
+    width: 55%;
+    padding: 15px;
+    
+}
+.search-input {
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid transparent;
+    width: 100%;
+    
+}
+.search-input::placeholder {
+    color: #ccc5c5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+.search-input:focus::placeholder {
+    color: white;
+}
+.search button  {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.search button i {
+    color: var(--mainColor);
+}
+.search button:hover {
+    background-color: #333;
+}
+.search h3 {
+    font-weight: bold;
+    color: white;
+}
+.search button:hover i{
+   color:white;
+}
+.results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width:767px) {
+    .results {
+        flex-direction: column;
+    }
+}
+.results > div {
+    width: 48%;
+}
+@media (max-width:767px) {
+    .results > div {
+        width: 100%;
+    }
+}
+.results .card-info {
+    padding: 5px 5px 20px 5px;
+    text-align: center;
+    border: 1px solid #777;
+    border-radius: 10px;
+    box-shadow:  0 4px 20px var(--secColor);
+    margin-bottom: 10px;
+}
+.results .card-info .info h2 {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin:  0 auto;
+}
+.results .card-info .info a {
+    text-decoration: none;
+    background-color: var(--mainColor);
+    padding: 6px 15px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s all;
+}
+.results .card-info .info a:hover {
+    background-color: #333;
+}
+img {
+    width: 100% ;
+    border-radius: 7px 7px 0 0;
+    opacity: 0.7;
+    transition: 1s all;
+}
+@media (max-width:767px) {
+    img  {
+        
+        width: 100%;
+    }
+}
+img:hover {
+    opacity: 1;
+}
+
+.details {
+    position: fixed;
+    width: 45%;
+    height: 100vh;
+    background-color: var(--mainColor);
+    left: 0;
+    color: white;
+    padding: 100px 30px;
+    gap: 25px;
+    transition: 0.5 all;
+    display: flex;
+    flex-direction: column;
+}
+.show-details{
+    display: none;
+}
+
+.details {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+.details i {
+    font-size: 40px;
+    right: 20px;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}
+
+.details h3 {
+    font-size: 35px;
+
+}
+.details span {
+    font-size: 20px;
+}
+.details p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal !important;
+}
+.details a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secColor);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    
+}
+.details a:hover {
+    background-color: white;
+    color: var(--secColor);
+}
